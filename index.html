@@ -3,70 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Influência da Cidade no Banco</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Agro VSCode</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cor-de-fundo: #0D4C27; /* Verde escuro */
+            --amarelo: #F4D03F; /* Amarelo, remetendo ao campo */
+            --branco: #F8F9F9; /* Branco para contraste */
+            --botao-ativo: #6C8A3D; /* Verde médio */
+            --botao-inativo: #1F4C28; /* Verde mais escuro */
+            --texto-fundo: #2C3E50; /* Cor de fundo para o conteúdo */
+            --fonte: 'Oswald';
+        }
+
+        body {
+            background-color: var(--cor-de-fundo);
+            color: var(--branco);
+            font-family: var(--fonte);
+            margin: 0;
+            padding: 0;
+        }
+
+        .conteudo-principal {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        .titulo-principal {
+            text-align: left;
+            width: 100%;
+            font-size: 32px;
+        }
+
+        .titulo-principal span {
+            color: var(--amarelo);
+        }
+
+        .botao {
+            font-family: var(--fonte);
+            background-color: var(--botao-inativo);
+            color: var(--branco);
+            display: flex;
+            justify-content: center;
+            padding: 1em;
+            font-size: 18px;
+            align-items: center;
+            width: 100%;
+            border-bottom: 4px solid var(--botao-ativo);
+            border-left: 2px solid var(--botao-ativo);
+            border-right: 2px solid var(--botao-ativo);
+            border-top: none;
+            transition: background-color 0.3s;
+        }
+
+        .botao:hover {
+            background-color: var(--botao-ativo);
+        }
+
+        .botoes {
+            display: block;
+            width: 100%;
+        }
+
+        .botao:first-child {
+            border-radius: 40px 0 0 0;
+        }
+
+        .botao:last-child {
+            border-radius: 0 40px 0 0;
+        }
+
+        @media screen and (min-width: 768px) {
+            .botoes {
+                display: flex;
+            }
+        }
+
+        .abas-textos {
+            background-color: var(--texto-fundo);
+            padding: 40px;
+            border-radius: 0 0 40px 40px;
+            width: 100%;
+        }
+
+        .botao.ativo {
+            background-color: var(--botao-ativo);
+            border-bottom: 4px solid var(--amarelo);
+        }
+
+        .aba-conteudo {
+            display: none;
+        }
+
+        .aba-conteudo.ativo {
+            display: block;
+        }
+
+        .aba-conteudo-titulo-principal {
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .aba-conteudo-titulo-secundario {
+            text-align: center;
+            color: var(--amarelo);
+            text-transform: uppercase;
+        }
+
+        .contador {
+            font-size: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contador-digito {
+            padding: 0 16px;
+            text-align: center;
+            min-height: 100px;
+        }
+
+        .contador-digito-numero {
+            font-size: 80px;
+            margin: 0;
+        }
+
+        .contador-digito-texto {
+            color: var(--amarelo);
+            font-size: 20px;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>A Influência da Cidade no Banco</h1>
-            <p>Como as dinâmicas urbanas afetam as práticas bancárias e as economias locais</p>
+    <div class="conteudo-principal">
+        <div class="titulo-principal">
+            <h1>Bem-vindo ao <span>Agro VSCode</span></h1>
         </div>
-    </header>
 
-    <main>
-        <section class="intro">
-            <div class="container">
-                <h2>Entenda o impacto</h2>
-                <p>O ambiente urbano é fundamental para o crescimento econômico e influencia diretamente o sistema bancário. Neste site, exploramos como as cidades desempenham um papel importante nas operações bancárias e nas soluções financeiras.</p>
-            </div>
-        </section>
-
-        <section class="imagens">
-            <div class="container">
-                <div class="imagem">
-                    <img src="https://via.placeholder.com/600x400/cccccc/ffffff?text=Cidade+Moderna" alt="Cidade moderna">
-                    <p>Cidades com infraestrutura avançada impactam diretamente a acessibilidade aos serviços bancários.</p>
-                </div>
-                <div class="imagem">
-                    <img src="https://via.placeholder.com/600x400/cccccc/ffffff?text=Banco+Digital" alt="Banco digital">
-                    <p>A inovação bancária nas grandes cidades tem promovido a digitalização dos serviços financeiros.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="influencias">
-            <div class="container">
-                <h2>Influências da Cidade no Banco</h2>
-                <ul>
-                    <li>
-                        <h3>1. Economia Local</h3>
-                        <p>Cidades com uma economia forte atraem investimentos bancários, resultando em uma maior variedade de serviços e acesso ao crédito.</p>
-                    </li>
-                    <li>
-                        <h3>2. Tecnologia e Inovação</h3>
-                        <p>As grandes cidades estão na vanguarda da inovação, impulsionando o crescimento dos bancos digitais e da tecnologia financeira.</p>
-                    </li>
-                    <li>
-                        <h3>3. Diversidade de Clientes</h3>
-                        <p>Em ambientes urbanos, a diversidade populacional exige soluções bancárias mais flexíveis e personalizadas para diferentes grupos de clientes.</p>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="botoes">
-            <div class="container">
-                <button class="btn" onclick="window.location.href='https://www.exemplo.com/relatorio'">Leia o Relatório Completo</button>
-                <button class="btn" onclick="window.location.href='https://www.exemplo.com/solucoes'">Conheça as Soluções Bancárias</button>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Influência da Cidade no Banco | Todos os direitos reservados.</p>
+        <div class="botoes">
+            <button class="botao">Criar Novo Projeto</button>
+            <button class="botao">Abrir Projeto</button>
         </div>
-    </footer>
+
+        <div class="abas-textos">
+            <div class="aba-conteudo ativo">
+                <h2 class="aba-conteudo-titulo-principal">Inicie seu projeto Agro!</h2>
+                <p>Estamos criando um ambiente ideal para o desenvolvimento de soluções que unem tecnologia e campo. Use o Agro VSCode para desenvolver novas ferramentas para o setor agropecuário.</p>
+            </div>
+
+            <div class="aba-conteudo">
+                <h2 class="aba-conteudo-titulo-secundario">Novidades</h2>
+                <p>Confira as atualizações mais recentes sobre o Agro VSCode e como ele pode ajudar a digitalizar o agronegócio.</p>
+            </div>
+        </div>
+
+        <div class="contador">
+            <div class="contador-digito">
+                <span class="contador-digito-numero">35</span>
+                <span class="contador-digito-texto">Projetos Criados</span>
+            </div>
+            <div class="contador-digito">
+                <span class="contador-digito-numero">120</span>
+                <span class="contador-digito-texto">Linhas de Código</span>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

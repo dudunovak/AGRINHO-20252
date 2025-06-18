@@ -1,169 +1,107 @@
+/* Resetando o estilo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo cores principais */
 :root {
-    --cor-de-fundo: #4a7c3c; /* Verde escuro, representando o campo */
-    --AMARELO: #f1c40f; /* Amarelo, evocando a cor do campo e da colheita */
-    --branco: #ffffff; /* Branco para contraste */
-    --botao-ativo: #6f8c3e; /* Verde médio para os botões ativos */
-    --botao-inativo: #3e5c2b; /* Verde mais escuro, representando o campo */
-    --texto-fundo: #2c3e50; /* Cor escura para o fundo do conteúdo */
-    --fonte: 'Oswald'; /* Fonte Oswald para um estilo moderno */
+    --verde-escuro: #006400;
+    --verde-claro: #66cc66;
+    --preto: #000000;
+    --branco: #ffffff;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-
+/* Corpo da página */
 body {
-    background-color: var(--cor-de-fundo);
+    font-family: Arial, sans-serif;
+    background-color: var(--branco);
+    color: var(--preto);
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--verde-escuro);
     color: var(--branco);
-    font-family: var(--fonte);
-}
-
-.conteudo-principal {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.titulo-principal {
-    text-align: left;
-    width: 100%;
-    font-size: 32px;
-}
-
-.titulo-principal span {
-    color: var(--AMARELO);
-}
-
-.botao {
-    font-family: var(--fonte);
-    background-color: var(--botao-inativo);
-    color: var(--branco);
-    display: flex;
-    justify-content: center;
-    padding: 1em;
-    font-size: 18px;
-    align-items: center;
-    width: 100%;
-    border-bottom: 4px solid var(--botao-ativo);
-    border-left: 2px solid var(--botao-ativo);
-    border-right: 2px solid var(--botao-ativo);
-    border-top: none;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.botao:hover {
-    background-color: var(--botao-ativo);
-}
-
-.botoes {
-    display: block;
-}
-
-.botao:first-child {
-    border-radius: 40px 0 0 0;
-}
-
-.botao:last-child {
-    border-radius: 0 40px 0 0;
-}
-
-@media screen and (min-width: 768px) {
-    .botoes {
-        display: flex;
-    }
-}
-
-.abas-textos {
-    background-color: var(--texto-fundo);
-    padding: 40px;
-    border-radius: 0 0 40px 40px;
-}
-
-.botao.ativo {
-    background-color: var(--botao-ativo);
-    border-bottom: 4px solid var(--AMARELO);
-}
-
-.aba-conteudo {
-    display: none;
-}
-
-.aba-conteudo.ativo {
-    display: block;
-}
-
-.aba-conteudo-titulo-principal {
-    font-size: 28px;
-    text-align: center;
-}
-
-.aba-conteudo-titulo-secundario {
-    text-align: center;
-    color: var(--AMARELO);
-    text-transform: uppercase;
-}
-
-.contador {
-    font-size: 20px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.contador-digito {
-    padding: 0 16px;
-    text-align: center;
-    min-height: 100px;
-}
-
-.contador-digito-numero {
-    font-size: 80px;
-    margin: 0;
-}
-
-.contador-digito-texto {
-    color: var(--AMARELO);
-    font-size: 20px;
-    margin: 0;
-}
-
-/* Estilo adicional para imagens do tema agro */
-.imagem img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.influencias ul li {
-    background-color: #fff;
     padding: 20px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.influencias h3 {
-    font-size: 22px;
-    color: var(--cor-de-fundo);
+header .logo img {
+    width: 50px;
+    height: auto;
     margin-bottom: 10px;
 }
 
-.influencias p {
-    font-size: 16px;
-    color: #7f8c8d;
+header h1 {
+    font-size: 36px;
 }
 
-footer {
-    background-color: #3e5c2b;
-    color: var(--branco);
-    padding: 20px 0;
+/* Seção de Introdução */
+.intro {
+    padding: 40px;
     text-align: center;
+    background-color: var(--verde-claro);
 }
 
-footer p {
-    font-size: 14px;
+.intro h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
+.intro p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.intro button {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.intro button:hover {
+    background-color: var(--preto);
+}
+
+/* Seção de Imagens */
+.imagem-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.imagem {
+    text-align: center;
+    width: 40%;
+}
+
+.imagem img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.imagem p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: var(--verde-escuro);
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}

@@ -1,180 +1,43 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro VSCode</title>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --cor-de-fundo: #0D4C27; /* Verde escuro */
-            --amarelo: #F4D03F; /* Amarelo, remetendo ao campo */
-            --branco: #F8F9F9; /* Branco para contraste */
-            --botao-ativo: #6C8A3D; /* Verde médio */
-            --botao-inativo: #1F4C28; /* Verde mais escuro */
-            --texto-fundo: #2C3E50; /* Cor de fundo para o conteúdo */
-            --fonte: 'Oswald';
-        }
-
-        body {
-            background-color: var(--cor-de-fundo);
-            color: var(--branco);
-            font-family: var(--fonte);
-            margin: 0;
-            padding: 0;
-        }
-
-        .conteudo-principal {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            max-width: 1200px;
-            width: 100%;
-            margin: 0 auto;
-            padding: 40px;
-        }
-
-        .titulo-principal {
-            text-align: left;
-            width: 100%;
-            font-size: 32px;
-        }
-
-        .titulo-principal span {
-            color: var(--amarelo);
-        }
-
-        .botao {
-            font-family: var(--fonte);
-            background-color: var(--botao-inativo);
-            color: var(--branco);
-            display: flex;
-            justify-content: center;
-            padding: 1em;
-            font-size: 18px;
-            align-items: center;
-            width: 100%;
-            border-bottom: 4px solid var(--botao-ativo);
-            border-left: 2px solid var(--botao-ativo);
-            border-right: 2px solid var(--botao-ativo);
-            border-top: none;
-            transition: background-color 0.3s;
-        }
-
-        .botao:hover {
-            background-color: var(--botao-ativo);
-        }
-
-        .botoes {
-            display: block;
-            width: 100%;
-        }
-
-        .botao:first-child {
-            border-radius: 40px 0 0 0;
-        }
-
-        .botao:last-child {
-            border-radius: 0 40px 0 0;
-        }
-
-        @media screen and (min-width: 768px) {
-            .botoes {
-                display: flex;
-            }
-        }
-
-        .abas-textos {
-            background-color: var(--texto-fundo);
-            padding: 40px;
-            border-radius: 0 0 40px 40px;
-            width: 100%;
-        }
-
-        .botao.ativo {
-            background-color: var(--botao-ativo);
-            border-bottom: 4px solid var(--amarelo);
-        }
-
-        .aba-conteudo {
-            display: none;
-        }
-
-        .aba-conteudo.ativo {
-            display: block;
-        }
-
-        .aba-conteudo-titulo-principal {
-            font-size: 28px;
-            text-align: center;
-        }
-
-        .aba-conteudo-titulo-secundario {
-            text-align: center;
-            color: var(--amarelo);
-            text-transform: uppercase;
-        }
-
-        .contador {
-            font-size: 20px;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .contador-digito {
-            padding: 0 16px;
-            text-align: center;
-            min-height: 100px;
-        }
-
-        .contador-digito-numero {
-            font-size: 80px;
-            margin: 0;
-        }
-
-        .contador-digito-texto {
-            color: var(--amarelo);
-            font-size: 20px;
-            margin: 0;
-        }
-    </style>
+    <title>Do Campo à Cidade</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="conteudo-principal">
-        <div class="titulo-principal">
-            <h1>Bem-vindo ao <span>Agro VSCode</span></h1>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo Agro" class="logo-img">
+            <h1>Do Campo à Cidade</h1>
         </div>
+    </header>
 
-        <div class="botoes">
-            <button class="botao">Criar Novo Projeto</button>
-            <button class="botao">Abrir Projeto</button>
+    <!-- Seção de Introdução -->
+    <section class="intro">
+        <h2>Bem-vindo ao Mundo Agro</h2>
+        <p>Acompanhe a jornada do campo até as grandes cidades, com toda a riqueza que a agricultura traz para a economia e para o nosso cotidiano.</p>
+        <button onclick="window.location.href='campo.html'">Conheça o Campo</button>
+        <button onclick="window.location.href='cidade.html'">Explore a Cidade</button>
+    </section>
+
+    <!-- Seção de Imagens -->
+    <section class="imagem-container">
+        <div class="imagem">
+            <img src="campo.jpg" alt="Campo" class="imagem-campo">
+            <p>Cultura no Campo</p>
         </div>
-
-        <div class="abas-textos">
-            <div class="aba-conteudo ativo">
-                <h2 class="aba-conteudo-titulo-principal">Inicie seu projeto Agro!</h2>
-                <p>Estamos criando um ambiente ideal para o desenvolvimento de soluções que unem tecnologia e campo. Use o Agro VSCode para desenvolver novas ferramentas para o setor agropecuário.</p>
-            </div>
-
-            <div class="aba-conteudo">
-                <h2 class="aba-conteudo-titulo-secundario">Novidades</h2>
-                <p>Confira as atualizações mais recentes sobre o Agro VSCode e como ele pode ajudar a digitalizar o agronegócio.</p>
-            </div>
+        <div class="imagem">
+            <img src="cidade.jpg" alt="Cidade" class="imagem-cidade">
+            <p>Desenvolvimento na Cidade</p>
         </div>
+    </section>
 
-        <div class="contador">
-            <div class="contador-digito">
-                <span class="contador-digito-numero">35</span>
-                <span class="contador-digito-texto">Projetos Criados</span>
-            </div>
-            <div class="contador-digito">
-                <span class="contador-digito-numero">120</span>
-                <span class="contador-digito-texto">Linhas de Código</span>
-            </div>
-        </div>
-    </div>
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Do Campo à Cidade | Todos os direitos reservados</p>
+    </footer>
 </body>
 </html>

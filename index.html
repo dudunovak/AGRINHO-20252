@@ -5,12 +5,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Do Campo à Cidade</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilo geral */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .logo-img {
+            width: 50px;
+            vertical-align: middle;
+        }
+
+        .logo h1 {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .intro {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .intro h2 {
+            color: #4CAF50;
+        }
+
+        .intro p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .intro button {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .intro button:hover {
+            background-color: #45a049;
+        }
+
+        .imagem-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .imagem {
+            width: 30%;
+            text-align: center;
+        }
+
+        .imagem img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .search-container input {
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .search-container button {
+            padding: 10px 20px;
+            margin-left: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .search-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
    
     <header>
         <div class="logo">
-            <img src="logo.png" alt="Logo Agro" class="logo-img">
+            <img src="./img/logo.png" alt="Logo Agro" class="logo-img">
             <h1>Do Campo à Cidade</h1>
         </div>
     </header>
@@ -18,51 +163,79 @@
     <section class="intro">
         <h2>Bem-vindo ao Mundo Agro</h2>
         <p>Acompanhe a jornada do campo até as grandes cidades, com toda a riqueza que a agricultura traz para a economia e para o nosso cotidiano.</p>
-        <button onclick="window.location.href='campo.html'">Conheça o Campo</button>
-        <button onclick="window.location.href='cidade.html'">Explore a Cidade</button>
+        <button onclick="window.location.href='./campo.html'">Conheça o Campo</button>
+        <button onclick="window.location.href='./cidade.html'">Explore a Cidade</button>
     </section>
 
     <section class="imagem-container">
         <div class="imagem">
-            <img src="./pexels-photo-461960" alt="Campo" class="imagem-campo">
+            <img src="./img/pexels-photo-461960.jpg" alt="Campo" class="imagem-campo">
             <p>Cultura no Campo</p>
         </div>
         <div class="imagem">
-            <img src="./g_66_0_1_06062023152401.png" alt="Cidade" class="imagem-cidade">
+            <img src="./img/g_66_0_1_06062023152401.png" alt="Cidade" class="imagem-cidade">
             <p>Desenvolvimento na Cidade</p>
         </div>
     </section>
 
     <section class="imagem-container">
         <div class="imagem">
-            <img src="./360_F_158463255_tCRsLZBLCt7IgtimZGpDCwgYN4te8Uis.jpg" alt="Transporte Agrícola" class="3">
+            <img src="./img/360_F_158463255_tCRsLZBLCt7IgtimZGpDCwgYN4te8Uis.jpg" alt="Transporte Agrícola" class="img-agro">
             <p>Transporte de Produtos do Campo</p>
         </div>
         <div class="imagem">
-            <img src="./images.jpeg" alt="Tecnologia no Agro" class="img-agro">
+            <img src="./img/images.jpeg" alt="Tecnologia no Agro" class="img-agro">
             <p>Inovações Tecnológicas no Agro</p>
         </div>
         <div class="imagem">
-            <img src="./yur02051.jpg" alt="Mercado na Cidade" class="img-agro">
+            <img src="./img/yur02051.jpg" alt="Mercado na Cidade" class="img-agro">
             <p>Produtos Agro nas Cidades</p>
         </div>
     </section>
 
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Pesquise aqui...">
+        <button onclick="searchContent()">Buscar</button>
+    </div>
 
     <footer>
         <p>&copy; 2025 Do Campo à Cidade | Todos os direitos reservados</p>
     </footer>
+
+    <!-- Modal Section -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Explorando o Campo</h2>
+            <p>Assista ao vídeo sobre a vida no campo e suas contribuições para a economia.</p>
+            <iframe src="https://www.youtube.com/embed/example-video-id" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        // Modal functionality
+        const modal = document.getElementById('modal');
+        const closeBtn = document.querySelector('.close-btn');
+        
+        function openModal() {
+            modal.style.display = "block";
+        }
+
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = "none";
+        });
+
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Function for searching content (you can add custom logic here)
+        function searchContent() {
+            const query = document.getElementById('search').value;
+            alert(`Você está buscando por: ${query}`);
+        }
+    </script>
 </body>
 </html>
-<div id="modal" class="modal">
-    <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <h2>Explorando o Campo</h2>
-        <p>Assista ao vídeo sobre a vida no campo e suas contribuições para a economia.</p>
-        <iframe src="https://www.youtube.com/embed/example-video-id" frameborder="0" allowfullscreen></iframe>
-    </div>
-</div>
-<div class="search-container">
-    <input type="text" id="search" placeholder="Pesquise aqui...">
-    <button onclick="searchContent()">Buscar</button>
-</div>

@@ -79,6 +79,7 @@ p {
 
 .imagem {
     width: 30%;
+    height: 20px;
     text-align: center;
     background-color: #fff;
     border-radius: 8px;
@@ -195,7 +196,7 @@ footer {
 
     .imagem {
         width: 80%;
-        height: 60px;
+        height: 70px;
         margin-bottom: 20px;
     }
 

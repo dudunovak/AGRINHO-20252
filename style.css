@@ -1,11 +1,11 @@
-/* Resetando o estilo básico */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Definindo cores principais */
+
 :root {
     --verde-escuro: #006400;
     --verde-claro: #66cc66;
@@ -13,14 +13,14 @@
     --branco: #ffffff;
 }
 
-/* Corpo da página */
+
 body {
     font-family: Arial, sans-serif;
     background-color: var(--branco);
     color: var(--preto);
 }
 
-/* Cabeçalho */
+
 header {
     background-color: var(--verde-escuro);
     color: var(--branco);
@@ -38,7 +38,7 @@ header h1 {
     font-size: 36px;
 }
 
-/* Seção de Introdução */
+
 .intro {
     padding: 40px;
     text-align: center;
@@ -70,7 +70,7 @@ header h1 {
     background-color: var(--preto);
 }
 
-/* Seção de Imagens */
+
 .imagem-container {
     display: flex;
     justify-content: center;
@@ -97,7 +97,7 @@ header h1 {
     color: var(--verde-escuro);
 }
 
-/* Rodapé */
+
 footer {
     background-color: var(--verde-escuro);
     color: var(--branco);

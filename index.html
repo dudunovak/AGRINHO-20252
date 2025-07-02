@@ -5,36 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agro, Campo e Cidade</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Link para fontes modernas -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Bem-vindo ao Mundo Agro</h1>
-        <nav>
-            <ul>
-                <li><button onclick="openTab('campo')">Campo</button></li>
-                <li><button onclick="openTab('cidade')">Cidade</button></li>
-                <li><button onclick="openTab('agro')">Agro</button></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Agro, Campo e Cidade</h1>
+            <nav>
+                <ul>
+                    <li><button onclick="openTab('campo')">Campo</button></li>
+                    <li><button onclick="openTab('cidade')">Cidade</button></li>
+                    <li><button onclick="openTab('agro')">Agro</button></li>
+                    <li><button onclick="openTab('sobre')">Sobre</button></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    
-    <section id="content">
-        <div class="tab" id="campo">
-            <h2>O Campo</h2>
-            <img src="https://www.exemplo.com/campo.jpg" alt="Imagem do Campo">
-            <p>A vida no campo é marcada pela simplicidade e pelo contato direto com a natureza...</p>
+
+    <main>
+        <div id="campo" class="tab">
+            <section class="section-title">
+                <h2>O Campo</h2>
+            </section>
+            <section class="content">
+                <div class="image-container">
+                    <img src="https://www.exemplo.com/campo.jpg" alt="Campo">
+                </div>
+                <p>O campo é o berço da agricultura, onde tudo começa. A vida no campo é simples, mas cheia de significado. O contato direto com a natureza e os animais cria uma conexão única com o meio ambiente.</p>
+            </section>
+            <section class="content">
+                <h3>Benefícios do Campo</h3>
+                <ul>
+                    <li>Qualidade de vida no campo</li>
+                    <li>Conexão com a natureza</li>
+                    <li>Trabalho árduo e gratificante</li>
+                </ul>
+            </section>
         </div>
-        <div class="tab" id="cidade">
-            <h2>A Cidade</h2>
-            <img src="https://www.exemplo.com/cidade.jpg" alt="Imagem da Cidade">
-            <p>A cidade oferece inúmeras oportunidades e atividades para seus habitantes...</p>
+
+        <div id="cidade" class="tab">
+            <section class="section-title">
+                <h2>A Cidade</h2>
+            </section>
+            <section class="content">
+                <div class="image-container">
+                    <img src="https://www.exemplo.com/cidade.jpg" alt="Cidade">
+                </div>
+                <p>A cidade é o centro do desenvolvimento econômico e cultural. Aqui, as oportunidades são infinitas, mas também há desafios, como a vida agitada e a competição constante.</p>
+            </section>
+            <section class="content">
+                <h3>O que a cidade oferece</h3>
+                <ul>
+                    <li>Inovações e oportunidades de emprego</li>
+                    <li>Infraestrutura moderna</li>
+                    <li>Desafios urbanos</li>
+                </ul>
+            </section>
         </div>
-        <div class="tab" id="agro">
-            <h2>O Agro</h2>
-            <img src="https://www.exemplo.com/agro.jpg" alt="Imagem do Agro">
-            <p>O setor agropecuário é responsável por grande parte da produção de alimentos e insumos...</p>
+
+        <div id="agro" class="tab">
+            <section class="section-title">
+                <h2>O Agro</h2>
+            </section>
+            <section class="content">
+                <div class="image-container">
+                    <img src="https://www.exemplo.com/agro.jpg" alt="Agro">
+                </div>
+                <p>O setor agropecuário é essencial para a economia global, fornecendo alimentos, fibras e recursos. O agro é uma combinação de tradição e inovação, sempre em busca de sustentabilidade e crescimento.</p>
+            </section>
+            <section class="content">
+                <h3>Principais setores do Agro</h3>
+                <ul>
+                    <li>Agropecuária</li>
+                    <li>Agronegócios e tecnologia</li>
+                    <li>Produção e sustentabilidade</li>
+                </ul>
+            </section>
         </div>
-    </section>
+
+        <div id="sobre" class="tab">
+            <section class="section-title">
+                <h2>Sobre o Projeto</h2>
+            </section>
+            <section class="content">
+                <p>Este site foi criado com o objetivo de apresentar as diferenças e semelhanças entre o campo, a cidade e o setor agropecuário. Ele explora o impacto de cada um desses elementos na sociedade e na economia global, com um foco especial na sustentabilidade e inovação.</p>
+            </section>
+        </div>
+    </main>
 
     <footer>
         <p>© 2025 Agro, Campo e Cidade. Todos os direitos reservados.</p>

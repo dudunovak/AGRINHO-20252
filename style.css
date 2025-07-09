@@ -1,207 +1,96 @@
-/* Resetando alguns estilos padrão */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos do Body */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #1a1a1a;
-    color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* Cabeçalho */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background-color: #000;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-header .logo img {
-    height: 50px;
-    width: auto;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
 }
 
 header nav ul {
-    list-style: none;
+    list-style-type: none;
     display: flex;
-    gap: 20px;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
 }
 
 header nav ul li a {
-    color: #f2f2f2;
+    color: white;
     text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 600;
-    transition: color 0.3s;
 }
 
-header nav ul li a:hover {
-    color: #e50914;
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-/* Seção Home */
 .hero {
-    background-image: url('hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
     text-align: center;
-    padding: 100px 20px;
-    color: #fff;
+    padding: 50px;
 }
 
-.hero h2 {
-    font-size: 3rem;
-    font-weight: 700;
-}
-
-.hero p {
-    font-size: 1.5rem;
-    margin: 10px 0;
-}
-
-.hero .btn {
-    display: inline-block;
-    background-color: #e50914;
-    color: #fff;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    margin-top: 20px;
-}
-
-.hero .btn:hover {
-    background-color: #b20710;
-}
-
-/* Seção Sobre */
-.sobre {
-    padding: 60px 40px;
-    background-color: #222;
-    text-align: center;
-}
-
-.sobre h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-}
-
-.sobre p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 20px auto;
-}
-
-.sobre-imagem img {
+.hero img {
     width: 100%;
-    max-width: 600px;
-    border-radius: 8px;
-    margin-top: 30px;
+    max-height: 400px;
+    object-fit: cover;
 }
 
-/* Seção Portfólio */
-.portfolio {
-    padding: 60px 40px;
-    background-color: #333;
-    text-align: center;
-}
-
-.portfolio h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 30px;
-}
-
-.portfolio-items {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.portfolio-item {
-    background-color: #444;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.portfolio-item img {
-    width: 100%;
-    border-radius: 8px;
-    transition: transform 0.3s;
-}
-
-.portfolio-item img:hover {
-    transform: scale(1.05);
-}
-
-.portfolio .btn {
-    margin-top: 30px;
-}
-
-/* Seção Blog */
-.blog {
-    padding: 60px 40px;
-    background-color: #222;
-    text-align: center;
-}
-
-.blog h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 30px;
-}
-
-.blog-posts {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
-
-.blog-post {
-    background-color: #444;
-    padding: 20px;
-    border-radius: 8px;
-    transition: transform 0.3s;
-}
-
-.blog-post:hover {
-    transform: translateY(-10px);
-}
-
-.blog-post h3 {
-    font-size: 1.5rem;
-}
-
-.blog-post p {
-    font-size: 1rem;
-}
-
-.blog-post a {
-    color: #e50914;
-    text-decoration: none;
-}
-
-/* Seção Contato */
-.contato {
-    padding: 60px 40px;
-    background-color: #333;
-    text-align: center;
-}
-
-.contato h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
+h1, h2 {
     margin-bottom: 20px;
 }
 
-.contato form input,
-.contato form textarea {
-    width: 100
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.galeria img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.contato form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contato label {
+    margin-bottom: 5px;
+}
+
+.contato input, .contato textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contato button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.contato button:hover {
+    background-color: #555;
+}

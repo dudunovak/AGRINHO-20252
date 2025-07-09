@@ -3,37 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design Esportivo - Futebol</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>King Design - Design Esportivo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navbar -->
     <header>
         <nav>
+            <div class="logo">
+                <a href="index.html">King Design</a>
+            </div>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="design-uniformes.html">Design de Uniformes</a></li>
-                <li><a href="jogadores.html">Jogadores</a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#equipe">Equipe</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <img src="images/futebol.jpg" alt="Futebol em ação">
-            <h1>Design Esportivo para Jogadores de Futebol</h1>
-            <p>Explorando o impacto do design nos uniformes e na identidade visual dos jogadores.</p>
-        </section>
+    <!-- Seção Hero (Introdução) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>King Design</h1>
+            <p>Design Esportivo Premium para Jogadores de Futebol</p>
+            <a href="#produtos" class="btn-primary">Confira nossos produtos</a>
+        </div>
+    </section>
 
-        <section class="sobre">
-            <h2>Sobre o Design Esportivo</h2>
-            <p>O design esportivo é uma parte fundamental da imagem de jogadores, times e marcas. Aqui, exploramos as tendências, a criatividade e a inovação nos uniformes de futebol.</p>
-        </section>
-    </main>
+    <!-- Seção Sobre -->
+    <section id="sobre" class="sobre">
+        <div class="content">
+            <h2>Sobre nós</h2>
+            <p>Na King Design, acreditamos que o design é fundamental para a identidade de um jogador. Criamos uniformes inovadores, com atenção a cada detalhe, proporcionando conforto, estilo e performance para atletas de elite.</p>
+        </div>
+    </section>
 
+    <!-- Seção Produtos -->
+    <section id="produtos" class="produtos">
+        <div class="content">
+            <h2>Nossos Produtos</h2>
+            <p>Explore nossos designs exclusivos para uniformes de futebol e acessórios personalizados.</p>
+            <div class="produtos-gallery">
+                <div class="produto">
+                    <img src="images/produto1.jpg" alt="Uniforme 1">
+                    <p>Uniforme Personalizado</p>
+                </div>
+                <div class="produto">
+                    <img src="images/produto2.jpg" alt="Uniforme 2">
+                    <p>Design Esportivo Inovador</p>
+                </div>
+                <div class="produto">
+                    <img src="images/produto3.jpg" alt="Uniforme 3">
+                    <p>Uniforme com Tecnologia Avançada</p>
+                </div>
+            </div>
+            <a href="#" class="btn-secondary" target="_blank">Veja mais designs</a>
+        </div>
+    </section>
+
+    <!-- Seção Equipe -->
+    <section id="equipe" class="equipe">
+        <div class="content">
+            <h2>Nossa Equipe</h2>
+            <p>Somos um time de designers especializados, apaixonados por futebol e pela criação de designs exclusivos para jogadores.</p>
+            <div class="equipe-gallery">
+                <div class="membro">
+                    <img src="images/designer1.jpg" alt="Designer 1">
+                    <p>João Silva - Designer Gráfico</p>
+                </div>
+                <div class="membro">
+                    <img src="images/designer2.jpg" alt="Designer 2">
+                    <p>Ana Costa - Designer de Moda Esportiva</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="contato">
+        <div class="content">
+            <h2>Entre em Contato</h2>
+            <form action="submit_form.php" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+                <button type="submit" class="btn-primary">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Design Esportivo - Todos os direitos reservados</p>
+        <p>&copy; 2025 King Design - Todos os direitos reservados</p>
     </footer>
 
     <script src="js/main.js"></script>

@@ -3,127 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro, Campo e Cidade</title>
+    <title>King Design - Design Gráfico Esportivo</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Link para fontes modernas -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Cabeçalho -->
     <header>
-        <div class="container">
-            <h1>Agro, Campo e Cidade</h1>
-            <nav>
-                <ul>
-                    <li><button onclick="openTab('campo')">Campo</button></li>
-                    <li><button onclick="openTab('cidade')">Cidade</button></li>
-                    <li><button onclick="openTab('agro')">Agro</button></li>
-                    <li><button onclick="openTab('sobre')">Sobre</button></li>
-                </ul>
-            </nav>
+        <div class="logo">
+            <img src="king-design-logo.png" alt="King Design Logo">
+            <h1>King Design</h1>
         </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <!-- Campo -->
-        <div id="campo" class="tab">
-            <section class="section-title">
-                <h2>O Campo: A Vida no Interior</h2>
-            </section>
-            <section class="content">
-                <div class="image-container">
-                    <img src="./image copy 4.png" alt="Campo">
-                </div>
-                <p class="Campo">A vida no campo é muitas vezes associada ao trabalho árduo, mas também à tranquilidade, ao contato direto com a natureza e à produção de alimentos essenciais. O campo tem sido um alicerce da sociedade, fornecendo a base para a agricultura e pecuária, além de ser um refúgio de paz e simplicidade para muitos.</p>
-                <p class="Campo">Em diversas regiões do mundo, a vida rural está em constante transformação. O avanço das tecnologias no campo trouxe mais eficiência e sustentabilidade, permitindo que os agricultores se conectem com o mundo digital para monitorar suas produções, otimizar colheitas e promover práticas agrícolas sustentáveis.</p>
-                </p>
-          </section>
+    <!-- Seção Home -->
+    <section id="home" class="hero">
+        <h2>Transformamos a Arte do Futebol</h2>
+        <p>Design Gráfico Exclusivo para Jogadores de Futebol</p>
+        <a href="#portfolio" class="btn">Ver Portfólio</a>
+    </section>
 
-            <section class="content">
-                <h3>Benefícios de viver no campo:</h3>
-                <ul>
-                    <li>Contato direto com a natureza.</li>
-                    <li>Qualidade de vida e ambiente tranquilo.</li>
-                    <li>Valorização do trabalho manual e produção  local.</li>
-                    <li>Menos poluição e stress.</li>
-                </ul>
-            </section>
+    <!-- Seção Sobre -->
+    <section id="sobre" class="sobre">
+        <h2>Sobre a King Design</h2>
+        <p>A King Design é especializada em criar experiências visuais incríveis para jogadores de futebol. Transformamos a paixão pelo esporte em arte digital, com design gráfico inovador, único e marcante.</p>
+        <div class="sobre-imagem">
+            <img src="sobre-imagem.jpg" alt="Design Gráfico de Futebol">
         </div>
+    </section>
 
-        <!-- Cidade -->
-        <div id="cidade" class="tab">
-            <section class="section-title">
-                <h2>A Cidade: O Centro do Desenvolvimento</h2>
-            </section>
-            <section class="content">
-                <div class="image-container">
-                     <img src="./image.png" alt="Cidade">
-                </div>
-                <p class="Cidade"> A cidade representa o centro do desenvolvimento humano e econômico. É onde estão concentrados os maiores avanços tecnológicos, as oportunidades de trabalho e educação, além de uma vida cultural mais intensa. No entanto, a cidade também apresenta desafios, como a densidade populacional, o trânsito e a poluição.</p>
-                <p class="Cidade"> Enquanto a vida urbana oferece diversas comodidades e inovações, ela também pode ser sobrecarregada pela falta de espaço, pela desigualdade social e pelos problemas ambientais. A cidade se reinventa constantemente, buscando soluções para melhorar a qualidade de vida e garantir um futuro mais sustentável para seus habitantes.</p>
-                </p>
-            </section>
-
-            <section class="content">
-                <h3>Vantagens da vida urbana:</h3>
-                <ul>
-                    <li>Acesso a oportunidades de emprego e educação.</li>
-                    <li>Infraestrutura avançada e serviços de saúde.</li>
-                    <li>Movimento cultural e social vibrante.</li>
-                    <li>Maior conectividade e modernidade.</li>
-                </ul>
-            </section>
+    <!-- Seção Portfólio -->
+    <section id="portfolio" class="portfolio">
+        <h2>Portfólio</h2>
+        <div class="portfolio-items">
+            <div class="portfolio-item">
+                <img src="portfolio1.jpg" alt="Design 1">
+                <p>Design para Jogador X</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="portfolio2.jpg" alt="Design 2">
+                <p>Design para Jogador Y</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="portfolio3.jpg" alt="Design 3">
+                <p>Design para Jogador Z</p>
+            </div>
         </div>
+        <a href="#blog" class="btn">Veja Mais Projetos</a>
+    </section>
 
-        <!-- Agro -->
-        <div id="agro" class="tab">
-            <section class="section-title">
-                <h2>O Agro: A Base da Alimentação Global</h2>
-            </section>
-            <section class="content">
-                <div class="image-container">
-                    <img src="./image copy.png" alt="Agro">
-                </div>
-                <p class="Agro"> O agropecuário é um dos pilares da economia mundial, fornecendo os alimentos e insumos necessários para sustentar a população global. O setor agro está cada vez mais moderno, utilizando tecnologias como a automação, drones, inteligência artificial e técnicas de cultivo sustentável.</p>
-                <p class="Agro"> Desde a produção de grãos, hortaliças, até a criação de gado, o agro envolve um ciclo de trabalho que vai desde o plantio até a comercialização. O setor também busca soluções para minimizar os impactos ambientais e garantir que a produção de alimentos seja suficiente para alimentar o mundo de forma sustentável.</p>
-                </p>
-            </section>
-
-            <section class="content">
-                <h3>O Agro no Brasil:</h3>
-                <p>O Brasil é um dos maiores produtores de alimentos do mundo, com destaque para a soja, café, carne bovina e suína, além de ser líder em exportação de diversos produtos agropecuários. A agroindústria é responsável por uma significativa parcela do PIB brasileiro e gera milhões de empregos diretos e indiretos.</p>
-            </section>
+    <!-- Seção Blog -->
+    <section id="blog" class="blog">
+        <h2>Últimos Artigos</h2>
+        <div class="blog-posts">
+            <div class="blog-post">
+                <h3><a href="#">O Impacto do Design Gráfico no Futebol</a></h3>
+                <p>Como o design gráfico pode transformar a imagem de um jogador e de um clube de futebol...</p>
+            </div>
+            <div class="blog-post">
+                <h3><a href="#">Tendências no Design de Camisas de Futebol</a></h3>
+                <p>Explore as últimas tendências em design gráfico para camisas e equipamentos esportivos...</p>
+            </div>
         </div>
+        <a href="#contato" class="btn">Fale Conosco</a>
+    </section>
 
-        <!-- Sobre -->
-        <div id="sobre" class="tab">
-            <section class="section-title">
-                <h2>Sobre o Projeto</h2>
-            </section>
-            <section class="content">
-                <p class="sobre"> Este site tem como objetivo explorar e detalhar três aspectos fundamentais da sociedade moderna: o campo, a cidade e o setor agropecuário. Cada um desses temas tem um impacto profundo na nossa vida cotidiana, na economia global e na sustentabilidade do planeta.</p>
-                <p class="sobre"> O projeto foi desenvolvido para fornecer informações educativas e de fácil acesso sobre como esses três mundos interagem e se influenciam, destacando a importância do equilíbrio entre a modernização e a preservação ambiental.</p>
-            </p>
-            </section>
-        </div>
-    </main>
+    <!-- Seção Contato -->
+    <section id="contato" class="contato">
+        <h2>Entre em Contato</h2>
+        <form>
+            <input type="text" placeholder="Seu Nome" required>
+            <input type="email" placeholder="Seu Email" required>
+            <textarea placeholder="Sua Mensagem" required></textarea>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
 
-    <footer> 
-        <p>© 2025 Agro, Campo e Cidade. Todos os direitos reservados.</p>
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 King Design | Todos os direitos reservados</p>
     </footer>
-
-    <script>
-        function openTab(tabName) {
-            // Esconde todas as abas
-            const tabs = document.querySelectorAll('.tab');
-            tabs.forEach(tab => tab.style.display = 'none');
-
-            // Mostra a aba selecionada
-            const activeTab = document.getElementById(tabName);
-            activeTab.style.display = 'block';
-        }
-
-        // Abre a primeira aba por padrão
-        openTab('campo');
-    </script>
 </body>
 </html>

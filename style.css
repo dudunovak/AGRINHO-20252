@@ -1,93 +1,207 @@
-{
+/* Resetando alguns estilos padrão */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos do Body */
 body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #9effaf;
-    color: #333;
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #f2f2f2;
 }
 
+/* Cabeçalho */
 header {
-    background-color: #388E3C;
-    color: rgb(176, 255, 162);
-    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo img {
+    height: 50px;
+    width: auto;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #e50914;
+}
+
+/* Seção Home */
+.hero {
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
     text-align: center;
+    padding: 100px 20px;
+    color: #fff;
 }
 
-header h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 4rem;
-    margin-bottom: 10px;
+.hero h2 {
+    font-size: 3rem;
+    font-weight: 700;
 }
 
-nav ul {
-    list-style-type: none;
+.hero p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.hero .btn {
+    display: inline-block;
+    background-color: #e50914;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
     margin-top: 20px;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 30px;
+.hero .btn:hover {
+    background-color: #b20710;
 }
 
-button {
-    padding: 10px 25px;
-    font-size: 3.3rem;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #2C6D2F;
-}
-
-main {
-    padding: 60px 10%;
-}
-
-.section-title {
-    margin-bottom: 50px;
+/* Seção Sobre */
+.sobre {
+    padding: 60px 40px;
+    background-color: #222;
     text-align: center;
 }
 
-h2 {
-    font-size: 3.3rem;
-    color: #388E3C;
+.sobre h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
 }
 
-.content {
-    margin-bottom: 60px;
+.sobre p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 20px auto;
 }
 
-.image-container {
+.sobre-imagem img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+/* Seção Portfólio */
+.portfolio {
+    padding: 60px 40px;
+    background-color: #333;
     text-align: center;
-    margin-bottom: 50px;
 }
 
-img {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-}
-.Campo{
-    font-size: 24px;
+.portfolio h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
 }
 
-.Cidade{
-    font-size: 24px;
+.portfolio-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
-.Agro{
-    font-size: 24px;
+.portfolio-item {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 8px;
 }
 
-.sobre{
-    font-size: 24px;
+.portfolio-item img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s;
 }
+
+.portfolio-item img:hover {
+    transform: scale(1.05);
+}
+
+.portfolio .btn {
+    margin-top: 30px;
+}
+
+/* Seção Blog */
+.blog {
+    padding: 60px 40px;
+    background-color: #222;
+    text-align: center;
+}
+
+.blog h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.blog-posts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.blog-post {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.blog-post:hover {
+    transform: translateY(-10px);
+}
+
+.blog-post h3 {
+    font-size: 1.5rem;
+}
+
+.blog-post p {
+    font-size: 1rem;
+}
+
+.blog-post a {
+    color: #e50914;
+    text-decoration: none;
+}
+
+/* Seção Contato */
+.contato {
+    padding: 60px 40px;
+    background-color: #333;
+    text-align: center;
+}
+
+.contato h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.contato form input,
+.contato form textarea {
+    width: 100
